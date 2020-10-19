@@ -1,2 +1,2 @@
 # ProjectEulerProblems
-Trying something new with python
+Trying something new for fun
