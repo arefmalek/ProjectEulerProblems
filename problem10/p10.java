@@ -10,8 +10,7 @@ public class p10 {
 
 		long sum = 0;
 		
-		List<Boolean> blist=new ArrayList<Boolean>(limit);
-		Collections.fill(blist, Boolean.TRUE);
+		int[] blist = new int[limit];
 
 		//cool lessons: think about all parts of an algorithm:
 		//how it works is nice but also how each part 
@@ -21,9 +20,12 @@ public class p10 {
 			if (blist[i] == 0) {
 				sum += i;
 
-				for (long j = i*i; j < limit; j += i) {
-					blist[j] = 1;
+				if (i < Math.sqrt(limit) + 1) {
+					for (int j = i*i; j < limit; j += i) {
+						blist[j] = 1;
+					}
 				}
+				
 			}
 		}
 
