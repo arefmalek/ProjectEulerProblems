@@ -1,3 +1,5 @@
+from math import factorial
+
 # thought design:
 #
 # multiply all numbers together
@@ -5,11 +7,20 @@
 # already in the list get removed from the list
 
 def multiplier(number):
-    num = [*range(3, number, 2)]
-    remaining = []
+    total = factorial(number)
+
+    squa = [*range(1, number + 1)]
+
+    for i in range(number, 1, -1):
+        total /= i
+        print(i)
+
+        for j in range(1, i):
+            if i % j == 0 and j in squa:
+                squa.remove(j)
 
 
-answer = 1
-for x in range(2, 21):
-    answer *= x
-print(answer)
+    return squa
+
+
+print(multiplier(10))
