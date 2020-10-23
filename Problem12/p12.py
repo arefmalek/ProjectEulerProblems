@@ -1,23 +1,13 @@
-#work backwards, give in input number, return list of divisors
+import numpy as np
 
-#screw it im bruce forcing lol
+def tryit(aye):
+    triangle = sum(range(1, aye + 1))
+    factors = [triangle]
 
-def triangle(number):
+    for num in range(1, int(triangle/2) + 1):
+        if (triangle%num == 0):
+            print(num)
+            factors.append(num)
 
-    guys = [*range(1, number+1)]
-    total = sum(guys)
 
-    factors = []
-    for i in range(1, int(total/2)):
-        if(total % i == 0):
-            factors.append(i)
-    factors.append(number)
-    return len(factors), total
-
-i = 0
-divisors, tri_num = triangle(i)
-while (divisors < 500):
-    divisors, tri_num = triangle(i)
-    i+=1
-
-print(tri_num)
+print(tryit(7))
