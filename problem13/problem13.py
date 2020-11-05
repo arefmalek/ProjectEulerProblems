@@ -6,4 +6,4 @@ def summing(filename):
 
     return str(total)[:10]
 
-print(summing("number.txt"))
+print(summing("problem13\\number.txt"))

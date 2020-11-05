@@ -1,13 +1,22 @@
 import numpy as np
 
-def tryit(aye):
-    triangle = sum(range(1, aye + 1))
-    factors = [triangle]
+def factorize(n):
+    ind = 1
+    fac_count = 1
+    while fac_count < n_count:
+        ind+=1
+        num = sum(range(ind + 1))
+        factors = []
+        for i in range(1, int(num**0.5 + 1)):
+            if (num % i == 0):
+                if (i == num ** 0.5):
+                    factors.append(i)
+                else:
+                    factors.extend([i, int(num / i)])
+        fac_count = len(factors)
 
-    for num in range(1, int(triangle/2) + 1):
-        if (triangle%num == 0):
-            print(num)
-            factors.append(num)
+    return (sum(range(ind + 1)))
 
+n_count = 500
+print(factorize(n_count))
 
-print(tryit(7))

@@ -36,7 +36,7 @@ with open("Problem11\\num.txt") as f:
         line_list = list(line.split())
         datalist.append([int(i) for i in line_list])
 
-print(pain(datalist,4))
+print(pain(datalist, 4))
 
 # #horizontal
 #             temp = datalist[arr][num - length: num]
