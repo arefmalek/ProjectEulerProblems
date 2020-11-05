@@ -16,25 +16,29 @@ def v2(arr):
 def bonusv2(arr):
     prod = [1] * len(arr)
 
-    for i in range(1, len(arr)):
-        prod[i] *= prod[i - 1] * arr[i - 1]
-    print(prod)
-
     backwards = 1
-    for j in range(len(arr) - 2, -1, -1):
-        backwards *= arr[j + 1]
-        prod[j] *= backwards 
-    print(prod)
+    forwards = 1
 
-#a1 = np.flip(np.arange(1, 4))
-#v1 works
+    for i in range(1, len(arr)):
+        print(forwards, backwards)
+        print(prod)
 
-inc = [*range(1,6)]
+        forwards *= arr[i - 1]
+        prod[i] *= forwards 
+        #messy I know but I really want this in one loop
+        
+        n = len(arr) - 1 - i
+        backwards *= arr[n + 1]
+        prod[n] *= backwards
+    print(forwards, backwards)
+
+    return(prod)
+
+inc = [3, 6, 2, 5, 4]
 # v2 works
 yayo = math.prod(inc)
-
-#playing around with no div method
 print(yayo)
-
 print(inc)
-bonusv2(inc)
+print(bonusv2(inc))
+
+print(v2(inc))
