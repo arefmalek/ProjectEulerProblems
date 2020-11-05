@@ -13,6 +13,19 @@ def v2(arr):
     answer = [int(v2 / element) for element in arr]
     return answer
 
+def bonusv2(arr):
+    prod = [1] * len(arr)
+
+    for i in range(1, len(arr)):
+        prod[i] *= prod[i - 1] * arr[i - 1]
+    print(prod)
+
+    backwards = 1
+    for j in range(len(arr) - 2, -1, -1):
+        backwards *= arr[j + 1]
+        prod[j] *= backwards 
+    print(prod)
+
 #a1 = np.flip(np.arange(1, 4))
 #v1 works
 
@@ -23,6 +36,5 @@ yayo = math.prod(inc)
 #playing around with no div method
 print(yayo)
 
-answer = [i for i in inc]
 print(inc)
-print(answer)
+bonusv2(inc)
