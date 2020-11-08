@@ -28,12 +28,12 @@ def recurse(entire_array, ind):
     if (temp == 1):
         print("done")
         return
+    temp = (int(temp))
     
     recurse(entire_array, temp)
-    print(ind, temp)
-    entire_array[ind][0] = entire_array[temp][0] + 1
-    
 
-yeet = [[i, 0] for i in range(1, 1_000)]
+    entire_array[ind][0] = entire_array[temp][0] + 1        
+
+yeet = [[i, 0] for i in range(1, 50)]
 yeet[0][1] = 1
 print(recurse(yeet, 13))

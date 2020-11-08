@@ -8,3 +8,6 @@
 <p>It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.</p>
 <p>Which starting number, under one million, produces the longest chain?</p>
 <p class="note"><b>NOTE:</b> Once the chain starts the terms are allowed to go above one million.</p>
+
+#
+I only got the recursive function to generate the sequence working. What I really want is a way to store the total count each number takes to go to 1 for the entire array (I think it will save tons of time like how Sieve's algorithm does)

@@ -20,8 +20,6 @@ def bonusv2(arr):
     forwards = 1
 
     for i in range(1, len(arr)):
-        print(forwards, backwards)
-        print(prod)
 
         forwards *= arr[i - 1]
         prod[i] *= forwards 
@@ -30,7 +28,6 @@ def bonusv2(arr):
         n = len(arr) - 1 - i
         backwards *= arr[n + 1]
         prod[n] *= backwards
-    print(forwards, backwards)
 
     return(prod)
 
