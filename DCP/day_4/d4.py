@@ -19,6 +19,14 @@ def v2(arr):
 
     return len(arr) + 1
 
+def v3(arr):
+    arr = arr.sort()
+    
+
 print(v2(
     [3, 4, -1, 1]
 ))
+
+z = [3, 4, -1, 1]
+z = [i for i in z if i > 0]
+print(z)
