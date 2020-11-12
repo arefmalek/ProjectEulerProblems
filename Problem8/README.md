@@ -24,3 +24,5 @@
 
 #
 I spent days thinking this was a grid and it turns out I literally just have to pass through this list once :'^)
+
+Additional Note: I did this in Java and its a great reminder to check what data type your using - I was headbanging for so long because I was using int instead of long :')
