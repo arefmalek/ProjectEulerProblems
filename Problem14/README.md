@@ -10,4 +10,4 @@
 <p class="note"><b>NOTE:</b> Once the chain starts the terms are allowed to go above one million.</p>
 
 #
-I only got the recursive function to generate the sequence working. What I really want is a way to store the total count each number takes to go to 1 for the entire array (I think it will save tons of time like how Sieve's algorithm does)
+I brute forced this one but if I ever come back to this one, the next thing I'd like to do is reduce the time it takes to use with memoizing
