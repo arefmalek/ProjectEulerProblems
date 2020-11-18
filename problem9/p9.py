@@ -1,24 +1,21 @@
 import numpy as np
 
-def gen_prim_pyth_trips(limit=None):
-    u = np.mat(' 1  2  2; -2 -1 -2; 2 2 3')
-    a = np.mat(' 1  2  2;  2  1  2; 2 2 3')
-    d = np.mat('-1 -2 -2;  2  1  2; 2 2 3')
-    uad = np.array([u, a, d])
-    m = np.array([3, 4, 5])
-    while m.size:
-        m = m.reshape(-1, 3)
-        if limit:
-            m = m[m[:, 2] <= limit]
-        yield from m
-        m = np.dot(m, uad)
+def triple(limit):
+    for a in range (1, limit):
+        for b in range (a + 1, limit):
+            c = b + 1
 
-def gen_all_pyth_trips(limit):
-    for prim in gen_prim_pyth_trips(limit):
-        i = prim
-        for _ in range(limit//prim[2]):
-            yield i
-            i = i + prim
+            while (c ** 2 < a ** 2 + b ** 2):
+                c+=1
 
-print(gen_prim_pyth_trips(limit=20))
-print(gen_all_pyth_trips(limit=50))
+            if (a **2 + b **2 == c**2):
+                    print(a, b, c)
+
+                    result = limit / (a + b + c)
+                    if (result % 1 == 0):
+                        return(result ** 3 * a * b * c)
+                
+
+
+
+print(triple(1000))
