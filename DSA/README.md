@@ -1,2 +1,2 @@
 # Data Structures and Algorithms
-I know nothing about this
+Slowly, but surely, I'll get there (self-learning)
