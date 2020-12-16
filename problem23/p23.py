@@ -8,26 +8,14 @@ def abundant(number):
         if (number % i == 0):
             if (i == number ** 0.5): factors += i
             else: factors += i + (number / i)    
-    return int(factors) if factors > number else 0
-
-def gf(num):
-    """this has nothing to do with the problem,
-    I just realized modeling factorials was easier than
-    expected"""
-    if(num == 1): return num
-    return (num * gf(num - 1))
-
-def combos(nums):
-    """kinda cheating cuz im using builtins"""
-    answers = list(set([sum(comb) for comb in combinations(nums, 2) 
-    if sum(comb) < 28123]))
-
-    return answers
+    return number if factors > number else 0
 
 
 
+x = [i for i in range(1,28123) if abundant(i) > 0]
 
-abundants = [abundant(i) for i in range(11, 28123) if 28123 > abundant(i) > 0]
+copies = {sum(subset) for subset in combinations(x,2) if sum(subset) < 28123}
+copies.update({2*z for z in x if 2*z < 28123})
 
-ans = combos(abundants)
-print(len(ans))
+answers = [i for i in range(1,28123) if i not in copies]
+print(sum(answers))

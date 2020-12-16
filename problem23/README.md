@@ -7,3 +7,5 @@
 
 # 
 Sounds like a problem for permutations and combinations
+
+lol shoutout to the builtins for doing like all the actual mathemetical work
