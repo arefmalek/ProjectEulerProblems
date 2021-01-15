@@ -3,4 +3,4 @@
 
 #
 
-It's a fairly simple fizzbuzz question, but I know wrote something in C to solve it, so + 10 gamer points B)
+It's a fairly simple fizzbuzz question, but I now wrote something in C to solve it, so + 10 gamer points B)
