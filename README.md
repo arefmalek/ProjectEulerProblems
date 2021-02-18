@@ -1,5 +1,9 @@
 # ProjectEulerProblems
 This is where I get a decent amount of mathematical algorithm exposure
+### UPDATE 2/18/2021
+Not **very** important, but I just broke into the top 10 percent of all users
+of the website :^)
+
 
 
 ## Naming Script

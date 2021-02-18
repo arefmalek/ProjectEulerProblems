@@ -1,5 +1,4 @@
 from urllib.request import urlopen
-import mdutils
 import os
 
 probnum = input("what problem are we trying to do today?\n")
@@ -16,19 +15,15 @@ end = title.find("</h2>")
 
 
 
-directory = "Problems\\problem" + str(probnum)
+directory = "Problems/problem" + str(probnum)
 
 # just to make sure its not something im already using
 if(not os.path.isdir(directory)):
     os.mkdir(directory)
 
-fname = directory + "\\README.md"
+fname = directory + "/README.md"
 
 with open(fname, 'w') as f:
     f.write("# " + title[start:end] + '\n')
     f.write(html)
 
-# mdFile = mdutils.MdUtils(file_name= fname,title=title[start:end])
-# mdFile.new_header(level=1,title= title[start:end])
-# mdFile.write(html)
-# mdFile.create_md_file()
