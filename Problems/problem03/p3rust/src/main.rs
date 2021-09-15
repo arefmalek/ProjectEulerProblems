@@ -1,17 +1,21 @@
 fn main() {
-    let upper_bound: i32 = 13195;
+    let upper_bound: i64 = 600851475143;
 
-    let loop_lim = (upper_bound / 2 as i32) + 1;
+    let loop_lim = ((upper_bound as f64).sqrt() as i64) + 1;
 
-    let a = vec![1; loop_lim];
+    let mut a = vec![1; loop_lim as usize];
 
-    for i in 2..=loop_lim {
-        if a[i] == 1 && upper_bound % i == 0 {
+    let mut answer = 0;
+    for i in 2..loop_lim {
+        if a[i as usize] == 1 && upper_bound % i == 0 {
             // divisible
-            for factor in (i..=loop_lim).step_by(2) {
-                a[factor] = 0;
+            answer = i;
+            for factor in (i..loop_lim).step_by(i as usize) {
+                a[factor as usize] = 0;
             }
         }
     }
+
+    println!("{}", answer)
 
 }
