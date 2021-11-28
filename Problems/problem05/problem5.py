@@ -1,12 +1,6 @@
 import numpy as np
 
 
-# thought design:
-#
-# multiply all numbers together
-# figure out a way that every number that is multiple of two prime numbers
-# already in the list get removed from the list
-
 def donesos(limit):
     primeList = sieve(limit)
     number = np.prod(primeList)
